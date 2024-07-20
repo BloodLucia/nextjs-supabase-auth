@@ -269,6 +269,20 @@
     "@react-types/textfield" "3.9.3"
     react-textarea-autosize "^8.5.3"
 
+"@nextui-org/link@^2.0.34":
+  version "2.0.34"
+  resolved "https://registry.npmmirror.com/@nextui-org/link/-/link-2.0.34.tgz#c3e5b61fca4a75274903a6c63eef72397196650a"
+  integrity sha512-497AvjzckEB/TE1eJEziS2QkxwCY81RPsWoApNSeHGdYrMO1tfgUFKATgadfBQjoba6FdCcLc2QaUapOetqFaA==
+  dependencies:
+    "@nextui-org/react-utils" "2.0.16"
+    "@nextui-org/shared-icons" "2.0.9"
+    "@nextui-org/shared-utils" "2.0.7"
+    "@nextui-org/use-aria-link" "2.0.19"
+    "@react-aria/focus" "3.17.1"
+    "@react-aria/link" "3.7.1"
+    "@react-aria/utils" "3.24.1"
+    "@react-types/link" "3.5.5"
+
 "@nextui-org/react-rsc-utils@2.0.13":
   version "2.0.13"
   resolved "https://registry.npmmirror.com/@nextui-org/react-rsc-utils/-/react-rsc-utils-2.0.13.tgz#b63b0e20542a39fe43052a30432ef0408cc7a5b6"
@@ -357,6 +371,17 @@
     "@react-aria/interactions" "3.21.3"
     "@react-aria/utils" "3.24.1"
     "@react-types/button" "3.9.4"
+    "@react-types/shared" "3.23.1"
+
+"@nextui-org/use-aria-link@2.0.19":
+  version "2.0.19"
+  resolved "https://registry.npmmirror.com/@nextui-org/use-aria-link/-/use-aria-link-2.0.19.tgz#c0d63e65b5ecca362120b12df0fff770b2e19e06"
+  integrity sha512-ef61cJLlwcR4zBWiaeHZy4K18juFjUup2SslfLIAiZz3kVosBCGKmkJkw1SASYY8+D/oUc2B6BFIk25YEsRKRw==
+  dependencies:
+    "@react-aria/focus" "3.17.1"
+    "@react-aria/interactions" "3.21.3"
+    "@react-aria/utils" "3.24.1"
+    "@react-types/link" "3.5.5"
     "@react-types/shared" "3.23.1"
 
 "@nextui-org/use-safe-layout-effect@2.0.6":
@@ -455,6 +480,18 @@
   integrity sha512-MzgTm5+suPA3KX7Ug6ZBK2NX9cin/RFLsv1BdafJ6CZpmUSpWnGE/yQfYUB7csN7j31OsZrD3/P56eShYWAQfg==
   dependencies:
     "@react-aria/utils" "^3.24.1"
+    "@react-types/shared" "^3.23.1"
+    "@swc/helpers" "^0.5.0"
+
+"@react-aria/link@3.7.1":
+  version "3.7.1"
+  resolved "https://registry.npmmirror.com/@react-aria/link/-/link-3.7.1.tgz#ae75feebc5c6f40e1031abf57f3125d45882e976"
+  integrity sha512-a4IaV50P3fXc7DQvEIPYkJJv26JknFbRzFT5MJOMgtzuhyJoQdILEUK6XHYjcSSNCA7uLgzpojArVk5Hz3lCpw==
+  dependencies:
+    "@react-aria/focus" "^3.17.1"
+    "@react-aria/interactions" "^3.21.3"
+    "@react-aria/utils" "^3.24.1"
+    "@react-types/link" "^3.5.5"
     "@react-types/shared" "^3.23.1"
     "@swc/helpers" "^0.5.0"
 
@@ -562,6 +599,13 @@
   version "3.8.1"
   resolved "https://registry.npmmirror.com/@react-types/checkbox/-/checkbox-3.8.1.tgz#de82c93542b2dd85c01df2e0c85c33a2e6349d14"
   integrity sha512-5/oVByPw4MbR/8QSdHCaalmyWC71H/QGgd4aduTJSaNi825o+v/hsN2/CH7Fq9atkLKsC8fvKD00Bj2VGaKriQ==
+  dependencies:
+    "@react-types/shared" "^3.23.1"
+
+"@react-types/link@3.5.5", "@react-types/link@^3.5.5":
+  version "3.5.5"
+  resolved "https://registry.npmmirror.com/@react-types/link/-/link-3.5.5.tgz#5ed829aa32f226fe62efb0d906b1926c110daf02"
+  integrity sha512-G6P5WagHDR87npN7sEuC5IIgL1GsoY4WFWKO4734i2CXRYx24G9P0Su3AX4GA3qpspz8sK1AWkaCzBMmvnunfw==
   dependencies:
     "@react-types/shared" "^3.23.1"
 
