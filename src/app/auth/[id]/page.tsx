@@ -32,8 +32,9 @@ export default async function SignIn({ params }: { params: { id: string } }) {
         <Image
           width={180}
           height={0}
+          priority
           src="/supabase.svg"
-          alt=""
+          alt="supabase logo"
           className="mx-auto mb-6 w-[180px] h-auto cursor-pointer"
         />
         {viewProp === 'password_signin' ? <PassswordSignIn /> : <SignUp />}
