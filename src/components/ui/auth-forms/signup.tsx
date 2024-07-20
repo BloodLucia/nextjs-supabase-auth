@@ -23,20 +23,8 @@ export const SignUp = () => {
       onSubmit={handleSubmit}
       className="flex flex-col items-stretch gap-y-3 w-full"
     >
-      <Input
-        defaultValue="thecvcoder@foxmail.com"
-        size="sm"
-        type="email"
-        label="Email"
-        required
-      />
-      <Input
-        defaultValue="12345678"
-        size="sm"
-        type="password"
-        label="Password"
-        required
-      />
+      <Input name="email" type="email" label="Email" required />
+      <Input name="password" type="password" label="Password" required />
       <Input defaultValue={usePathname()} type="hidden" name="pathname" />
       <Button
         className="mt-3"
