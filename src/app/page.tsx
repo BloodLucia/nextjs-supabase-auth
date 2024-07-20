@@ -1,5 +1,12 @@
+'use client'
+
+import { SignOut } from '@/components/ui/auth-forms/signout'
+import { Button } from '@nextui-org/button'
+
 export default function Home() {
   return (
-    <div>Welcome to Home Page</div>
+    <div>
+      <SignOut />
+    </div>
   )
 }

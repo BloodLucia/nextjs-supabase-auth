@@ -11,9 +11,6 @@ export const signInWithPassword = async (formData: FormData) => {
   const pathname = String(formData.get('pathname')).trim()
   const supabase = createClient()
   const cookieStore = cookies()
-
-  console.log(email, password)
-
   let redirectUrl: string
 
   const { data, error } = await supabase.auth.signInWithPassword({
@@ -82,4 +79,21 @@ export const signUp = async (formData: FormData) => {
   }
 
   return redirectPath
+}
+
+export const signOut = async (formData: FormData) => {
+  const pathname = String(formData.get('pathname')).trim()
+  const supabase = createClient()
+
+  const { error } = await supabase.auth.signOut()
+
+  if (error) {
+    return getToastRedirect(pathname, 'error', error.message)
+  } else {
+    return getToastRedirect(
+      '/auth/password_signin',
+      'success',
+      'You are now logged out.'
+    )
+  }
 }
