@@ -40,7 +40,7 @@ export default async function SignIn({ params }: { params: { id: string } }) {
         <div className="text-center text-sm mt-4">
           {viewProp === 'password_signin' ? (
             <>
-              Don't have an account?{' '}
+              Don{"'"}t have an account?{' '}
               <Link className="text-sm" href="/auth/signup">
                 Sign up now.
               </Link>
