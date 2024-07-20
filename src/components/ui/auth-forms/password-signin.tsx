@@ -13,11 +13,9 @@ export const PassswordSignIn = () => {
     e.preventDefault()
     setIsLoading(true)
     const formData = new FormData(e.currentTarget)
-    console.log(formData.get('email'))
-
-    const redirectUrl = await signInWithPassword(formData)
+    const redirectPath = await signInWithPassword(formData)
     setIsLoading(false)
-    if (redirectUrl) return router.replace(redirectUrl)
+    if (redirectPath) return router.replace(redirectPath)
   }
   return (
     <form
@@ -26,7 +24,6 @@ export const PassswordSignIn = () => {
     >
       <Input
         autoComplete="email"
-        size="sm"
         name="email"
         type="email"
         label="Email"
@@ -34,7 +31,6 @@ export const PassswordSignIn = () => {
       />
       <Input
         autoComplete="current-password"
-        size="sm"
         name="password"
         type="password"
         label="Password"
