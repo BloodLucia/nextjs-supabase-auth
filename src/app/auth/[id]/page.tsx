@@ -4,7 +4,6 @@ import { getDefaultAuthView, getViewTyps } from '@/utils/supabase/settings'
 import { PassswordSignIn } from '@/components/ui/auth-forms/password-signin'
 import { SignUp } from '@/components/ui/auth-forms/signup'
 import { createClient } from '@/utils/supabase/server'
-import Image from 'next/image'
 import { Link } from '@nextui-org/link'
 
 export default async function SignIn({ params }: { params: { id: string } }) {
@@ -29,14 +28,9 @@ export default async function SignIn({ params }: { params: { id: string } }) {
   return (
     <div className="w-full h-full min-h-dvh bg-stone-100 flex flex-col justify-center items-center">
       <div className="max-w-md w-full bg-white shadow-sm rounded-md p-8">
-        <Image
-          width={180}
-          height={0}
-          priority
-          src="/supabase.svg"
-          alt="supabase logo"
-          className="mx-auto mb-6 w-[180px] h-auto cursor-pointer"
-        />
+        <h1 className="font-semibold text-3xl mb-6 text-center">
+          {viewProp === 'password_signin' ? 'Sign In' : 'Sign Up'}
+        </h1>
         {viewProp === 'password_signin' ? <PassswordSignIn /> : <SignUp />}
         <div className="text-center text-sm mt-4">
           {viewProp === 'password_signin' ? (

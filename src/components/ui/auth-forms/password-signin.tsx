@@ -5,17 +5,19 @@ import { signInWithPassword } from '@/app/auth/actions'
 import { Button } from '@nextui-org/button'
 import { Input } from '@nextui-org/input'
 import { usePathname, useRouter } from 'next/navigation'
+import { handleRequest } from '@/utils/supabase/auth-helpers/client'
 
 export const PassswordSignIn = () => {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    // e.preventDefault()
     setIsLoading(true)
-    const formData = new FormData(e.currentTarget)
-    const redirectPath = await signInWithPassword(formData)
+    await handleRequest(e, signInWithPassword, router)
+    // const formData = new FormData(e.currentTarget)
+    // const redirectPath = await signInWithPassword(formData)
     setIsLoading(false)
-    if (redirectPath) return router.replace(redirectPath)
+    // if (redirectPath) return router.replace(redirectPath)
   }
   return (
     <form

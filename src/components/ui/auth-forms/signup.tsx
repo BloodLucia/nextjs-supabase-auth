@@ -5,17 +5,15 @@ import { signUp } from '@/app/auth/actions'
 import { Button } from '@nextui-org/button'
 import { Input } from '@nextui-org/input'
 import { usePathname, useRouter } from 'next/navigation'
+import { handleRequest } from '@/utils/supabase/auth-helpers/client'
 
 export const SignUp = () => {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
     setIsLoading(true)
-    const formData = new FormData(e.currentTarget)
-    const redirectUrl = await signUp(formData)
+    await handleRequest(e, signUp, router)
     setIsLoading(false)
-    if (redirectUrl) return router.replace(redirectUrl)
   }
   return (
     <form
