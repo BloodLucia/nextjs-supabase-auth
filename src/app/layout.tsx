@@ -22,10 +22,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextUIProvider>
           {children}
-        </NextUIProvider>
-        <Suspense>
+          <Suspense>
             <Toast position="top-right" richColors duration={2500} />
           </Suspense>
+        </NextUIProvider>
       </body>
     </html>
   )
